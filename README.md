@@ -1,2 +1,0 @@
-# DumpsterPanda
-Sandbox for Website
