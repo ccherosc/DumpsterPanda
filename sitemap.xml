@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://dumpsterpanda.com/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://dumpsterpanda.com/images/dumpster-rental-simpsonville-sc.png</image:loc>
+      <image:title>Roll-off dumpster on a job site — Dumpster Panda Waste Management, Simpsonville SC</image:title>
+      <image:caption>Dumpster Panda Waste Management provides premium roll-off dumpster rentals in Simpsonville, Five Forks, and Greater Upstate SC.</image:caption>
+      <image:geo_location>Simpsonville, South Carolina, US</image:geo_location>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://dumpsterpanda.com/brand_assets/dumpster-panda-logo.png</image:loc>
+      <image:title>Dumpster Panda Waste Management logo</image:title>
+      <image:caption>Logo for Dumpster Panda Waste Management — dumpster rental in Simpsonville SC</image:caption>
+    </image:image>
+
+  </url>
+
+</urlset>
