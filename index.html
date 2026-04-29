@@ -779,6 +779,101 @@
       flex-shrink: 0;
     }
 
+    /* ─── FAQ ─── */
+    #faq {
+      background: #1a1a1a;
+      padding: var(--sp-xl) 1.5rem var(--sp-2xl);
+    }
+    .faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .faq-header h2 {
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      color: var(--white);
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .faq-item {
+      background: #242424;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+    .faq-item:hover {
+      border-color: rgba(136,188,65,0.3);
+    }
+    .faq-item.open {
+      border-color: rgba(136,188,65,0.5);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-question-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.975rem;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(136,188,65,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    .faq-chevron svg {
+      stroke: var(--bamboo-green);
+      transition: stroke 0.2s ease;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+      background: rgba(136,188,65,0.22);
+    }
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+    .faq-item.open .faq-answer {
+      grid-template-rows: 1fr;
+    }
+    .faq-answer-inner {
+      overflow: hidden;
+    }
+    .faq-answer-content {
+      padding: 0 1.5rem 1.4rem;
+      font-size: 0.925rem;
+      color: var(--muted);
+      line-height: 1.8;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.1rem;
+      margin-top: -1px;
+    }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--pricing-footer-dark);
@@ -1134,6 +1229,111 @@
     </div>
   </section>
 
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq" aria-label="Frequently Asked Questions">
+    <div class="faq-inner">
+
+      <div class="faq-header">
+        <p class="eyebrow">Common Questions</p>
+        <h2>Got Questions? We've Got Answers.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">How much does dumpster rental cost in Simpsonville, SC?</span>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="2,4 6,8 10,4"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-content">
+                Dumpster Panda offers flat-rate pricing starting at $200 for a 13 yard bin. We have 3-day and 7-day rental options — no hidden fees, no surprise charges. The price you see is the price you pay.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">What areas do you serve?</span>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="2,4 6,8 10,4"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-content">
+                We serve Simpsonville, Five Forks, Mauldin, Fountain Inn, Greenville, and the Greater Upstate SC. Not sure if we cover your area? Give us a call or text at (864) 365-3885.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">What size dumpsters do you offer?</span>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="2,4 6,8 10,4"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-content">
+                We currently offer 13 yard and 14 yard roll-off bins — ideal for home cleanouts, remodeling debris, roofing projects, yard cleanup, and small construction jobs. Not sure which size fits your project? We're happy to help you choose.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Can I book online?</span>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="2,4 6,8 10,4"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-content">
+                Yes — you can book online 24/7 through our Workiz booking system. Prefer to talk? Call or text us at (864) 365-3885 and we'll get you set up fast.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-question-text">Do you protect driveways?</span>
+            <span class="faq-chevron" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="2,4 6,8 10,4"/>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <div class="faq-answer-content">
+                Absolutely. We place protective wood planks under every bin — every single time. Your driveway stays safe, and you don't have to ask for it. It's standard practice at Dumpster Panda.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   </main>
 
   <!-- ═══ FOOTER ═══ -->
@@ -1247,6 +1447,22 @@
       heroFallback.style.display = 'none';
     };
     heroPhoto.onerror = () => { heroPhoto.style.display = 'none'; };
+
+    /* ── FAQ accordion ── */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
   </script>
 
 </body>
